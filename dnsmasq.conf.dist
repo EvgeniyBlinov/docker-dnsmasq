@@ -1,0 +1,7 @@
+log-queries
+resolv-file=/etc/resolv.dnsmasq
+
+#server=8.8.8.8
+#server=8.8.4.4
+
+address=/some.lan/127.0.0.1

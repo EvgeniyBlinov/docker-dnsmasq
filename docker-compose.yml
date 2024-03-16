@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  dnsmasq:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: dnsmasq
+    cap_add:
+      - NET_ADMIN
+    restart: always
+    volumes:
+      - ./dnsmasq.conf:/etc/dnsmasq.conf:ro
+    ports:
+      - "32053:53/tcp"
+      - "32053:53/udp"
